@@ -10,14 +10,14 @@ import {
 
 const styles = StyleSheet.create({
   input: {
-    margin: 4,
+    margin: 5,
     padding: 10,
     borderWidth: 1,
   },
   addButton: {
-    margin: 4,
+    margin: 5,
     padding: 10,
-    backgroundColor: '#99f',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -58,10 +58,10 @@ class Form extends Component {
   }
 }
 
-export default Form;
-
 Form.propTypes = {
   text: PropTypes.string.isRequired,
   onChangeText: PropTypes.func.isRequired,
   addTodo: PropTypes.func.isRequired,
 };
+
+export default Form;

@@ -31,8 +31,6 @@ class TodoList extends Component {
   }
 }
 
-export default TodoList;
-
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
@@ -42,3 +40,5 @@ TodoList.propTypes = {
   ).isRequired,
   removeTodo: PropTypes.func.isRequired,
 };
+
+export default TodoList;

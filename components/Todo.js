@@ -14,11 +14,11 @@ const styles = StyleSheet.create({
     alignContent: 'center',
   },
   item: {
+    margin: 5,
     padding: 10,
-    fontSize: 18,
   },
   delete: {
-    margin: 4,
+    margin: 5,
     padding: 10,
     marginLeft: 'auto',
     backgroundColor: '#f00',
@@ -35,12 +35,10 @@ const Todo = ({ todo, removeTodo }) => (
       style={styles.delete}
       onPress={() => removeTodo(todo.id)}
     >
-      <Text style={styles.deleteText}>DONE</Text>
+      <Text style={styles.deleteText}>Done</Text>
     </TouchableOpacity>
   </View>
 );
-
-export default Todo;
 
 Todo.propTypes = {
   todo: PropTypes.shape({
@@ -49,3 +47,5 @@ Todo.propTypes = {
   }).isRequired,
   removeTodo: PropTypes.func.isRequired,
 };
+
+export default Todo;
