@@ -6,7 +6,7 @@ import {
 import Todo from './Todo';
 
 class TodoList extends Component {
-  _renderItem = ({ item }) => {
+  renderItem = ({ item }) => {
     const { removeTodo } = this.props;
 
     return (
@@ -24,12 +24,14 @@ class TodoList extends Component {
       <FlatList
         data={todos}
         extraData={todos.length}
-        renderItem={this._renderItem}
+        renderItem={this.renderItem}
         keyExtractor={todo => todo.id}
       />
     );
   }
 }
+
+export default TodoList;
 
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
@@ -40,5 +42,3 @@ TodoList.propTypes = {
   ).isRequired,
   removeTodo: PropTypes.func.isRequired,
 };
-
-export default TodoList;

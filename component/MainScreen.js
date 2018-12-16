@@ -3,7 +3,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import AddTodo from '../containers/AddTodo';
+import AddTodo from '../containers/Form';
 import TodoList from '../containers/TodoList';
 
 const styles = StyleSheet.create({
@@ -21,7 +21,7 @@ class MainScreen extends Component {
     };
   }
 
-  _onChangeText = text => this.setState({ text });
+  onChangeText = text => this.setState({ text });
 
   render() {
     const {
@@ -32,7 +32,7 @@ class MainScreen extends Component {
       <View style={styles.container}>
         <AddTodo
           text={text}
-          onChangeText={this._onChangeText}
+          onChangeText={this.onChangeText}
         />
         <TodoList />
       </View>

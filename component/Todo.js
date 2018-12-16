@@ -40,6 +40,8 @@ const Todo = ({ todo, removeTodo }) => (
   </View>
 );
 
+export default Todo;
+
 Todo.propTypes = {
   todo: PropTypes.shape({
     id: PropTypes.string,
@@ -47,5 +49,3 @@ Todo.propTypes = {
   }).isRequired,
   removeTodo: PropTypes.func.isRequired,
 };
-
-export default Todo;
